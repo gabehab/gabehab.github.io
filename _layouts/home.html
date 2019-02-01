@@ -1,0 +1,60 @@
+---
+layout: default
+
+---
+
+<div class="column-6">
+
+    <div class="hero">
+        <h4> Preface </h4>
+        <p> 
+            This is a site dedicated to all things technology, and a little bit about me. If you've manage to stumble onto this treasure trove of randomness by accident or misfortune, 
+            welcome! Please sit back and peruse at your leisure.
+        </p>
+
+        <h3> How I started </h3>
+        <p>
+            I've had the fortune of working in the tech industry for the better part of the last decade. My journey started off earnestly, working as a co-op student at a small NGO in
+            Toronto. It was there I honed my PHP, and general web development. Its there I learned that web development doesn't actually mean web programming and the world of all things web was much more complicated than I had known.
+        </p>
+        <p>
+            I didn't know what I wanted to do in terms of a career, or where I'd end up geographically, or even if I wanted to finish school. But ultimately, over the course of interships, co-op placements,
+             part time, contract and full time work, I've come to love building, creating and coding software.    
+        </p>
+
+        <h3> The present </h3>
+        <p> 
+            These days, I'm working at <a href="https://www.ubc.ca/"> UBC </a>, a world-renowned educational institution. It's here that I program solutions used by tens of thousands of 
+            students and faculty, with a unique tech stack and an awesome team.
+            Outside of of that, I also take part in a variety of my own projects and contracts. From working with companies across various industries 
+            (<a href="https://customcare.ca"> Insurance </a>, <a href="https://vidyard.com"> SaaS </a>, <a href="https://nexthome.ca/">Real estate </a>)
+            to building my own <a href="https:lyt.haus"> software</a>.
+        </p>
+    </div>
+
+    {{ content }}
+
+    {%- if site.posts.size > 0 -%}
+        <h3 class="post-list-heading">{{ page.list_title | default: "Newest work" }}</h3>
+        <div class="post-list">
+   
+        <div class="columns">
+            {%- for post in site.posts -%}
+            <div class="column-4">
+                    {%- assign date_format = site.minima.date_format | defadivt: "%b %-d, %Y" -%}
+                    <span class="post-meta">{{ post.date | date: date_format }}</span>
+                    <h3>
+                        <a class="post-link" href="{{ post.url | relative_url }}">
+                            {{ post.title | escape }}
+                        </a>
+                    </h3>
+                    {%- if site.show_excerpts -%}
+                    {{ post.excerpt }}
+                    {%- endif -%}        
+            </div>
+            {%- endfor -%}
+        </div>
+    </div>
+    {%- endif -%}
+
+</div>
