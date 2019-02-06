@@ -33,14 +33,15 @@ layout: default
     </div>
 
     {{ content }}
-
+    
     {%- if site.posts.size > 0 -%}
+    <div class="container">
         <h3 class="post-list-heading">{{ page.list_title | default: "Newest work" }}</h3>
         <div class="post-list">
    
         <div class="columns">
             {%- for post in site.posts -%}
-            <div class="column-4">
+            <div class="column">
                     {%- assign date_format = site.minima.date_format | defadivt: "%b %-d, %Y" -%}
                     <span class="post-meta">{{ post.date | date: date_format }}</span>
                     <h3>
@@ -54,6 +55,7 @@ layout: default
             </div>
             {%- endfor -%}
         </div>
+    </div>
     </div>
     {%- endif -%}
 
