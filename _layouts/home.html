@@ -39,15 +39,16 @@ layout: default
         <h3 class="post-list-heading">{{ page.list_title | default: "Newest work" }}</h3>
         <div class="post-list">
    
-        <div class="columns">
+        <div class="columns pt-2">
             {%- for post in site.posts -%}
             <div class="column">
-                    {%- assign date_format = site.minima.date_format | defadivt: "%b %-d, %Y" -%}
+                    {%- assign date_format =  defadivt: "%b %-d, %Y" -%}
                     <span class="post-meta">{{ post.date | date: date_format }}</span>
                     <h3>
                         <a class="post-link" href="{{ post.url | relative_url }}">
                             {{ post.title | escape }}
                         </a>
+                        <p> {{ post.content | truncatewords:50 | strip_html </p>
                     </h3>
                     {%- if site.show_excerpts -%}
                     {{ post.excerpt }}
