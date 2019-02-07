@@ -47,8 +47,9 @@ layout: default
                         <a class="post-link" href="{{ post.url | relative_url }}">
                             {{ post.title | escape }}
                         </a>
-                         {{ post.content | truncatewords:30 }}
-                    </h3>
+                     </h3>
+                     {{ post.content | truncatewords:30 }}
+                    
                    
                     {%- if site.show_excerpts -%}
                     {{ post.excerpt }}
