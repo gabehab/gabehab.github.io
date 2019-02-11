@@ -1,0 +1,34 @@
+---
+layout: page
+title: writings
+permalink: /writings/
+---
+
+<div class="container">
+    <div class="post-list">
+
+        <div class="columns pt-2">
+            {%- for post in site.posts -%}
+            <div class="column">
+                <span class="post-meta">{{ post.date | date: "%a, %b %d, %y" }}</span>
+                <h3>
+                    <a class="post-link" href="{{ post.url | relative_url }}">
+                        {{ post.title | escape }}
+                    </a>
+                </h3>
+                <div class="post-meta pb-2">
+
+                |&nbsp;{%- for cat in post.categories -%}
+                {{ cat }}&nbsp;|&nbsp;
+                {%- endfor -%}
+                </div>
+                {{ post.content | truncatewords:30 }}
+
+                {%- if site.show_excerpts -%}
+                {{ post.excerpt }}
+                {%- endif -%}
+            </div>
+            {%- endfor -%}
+        </div>
+    </div>
+</div>

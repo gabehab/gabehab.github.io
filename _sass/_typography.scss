@@ -12,6 +12,7 @@ h6 {
   margin-bottom: .5em;
   margin-top: 0;
 }
+
 .h1,
 .h2,
 .h3,
@@ -20,36 +21,59 @@ h6 {
 .h6 {
   font-weight: 500;
 }
+
 h1,
 .h1 {
   font-size: 2rem;
 }
+
 h2,
 .h2 {
   font-size: 1.6rem;
 }
+
 h3,
 .h3 {
   font-size: 1.4rem;
 }
+
 h4,
 .h4 {
   font-size: 1.2rem;
 }
+
 h5,
 .h5 {
   font-size: 1rem;
 }
+
 h6,
 .h6 {
   font-size: .8rem;
 }
 
 // Paragraphs
+
 p {
   margin: 0 0 $line-height;
-}
 
+  &.first::first-letter {
+    color: #c69c6d;
+    line-height: 25px;
+    font-size: 3.5em;
+    font-family: serif;
+  }
+}
+.post-list{
+  p{
+    &.first::first-letter {
+      color: inherit;
+      line-height: inherit;
+      font-size: unset;
+      font-family: inherit;
+    }
+  }
+}
 // Semantic text elements
 a,
 ins,
@@ -123,6 +147,7 @@ dl {
   dt {
     font-weight: bold;
   }
+
   dd {
     margin: $unit-2 0 $unit-4 0;
   }
