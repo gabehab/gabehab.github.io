@@ -4,7 +4,9 @@ title:  "Building a Flask Application: Intro"
 date:   2019-02-09 02:10:38 -0800
 categories: python vue web-development programming
 ---
-{.subtitle}##Why pick Flask?
+{.subtitle}
+##Why pick Flask?
+
 {:.first} 
 Flask is a Python framework designed to provide a lightweight and highly flexible web server. [Flask](http://flask.pocoo.org/docs/1.0/) sells itself by stating how unopinionated it is, how few dependancies are required and how simple it is to get developing. Unlike [Django](https://www.djangoproject.com/), which has the opposite mentality of Flask, there is no default modeling, database abstraction or form management. All that's provided is an interface to basic web server needs like requests, routing and templating - the bare bones required to create a web app. 
 
