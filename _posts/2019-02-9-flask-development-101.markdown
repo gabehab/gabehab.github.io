@@ -4,7 +4,7 @@ title:  "Building a Flask Application: Where to Start"
 date:   2019-02-09 02:10:38 -0800
 categories: python vue web-development programming
 ---
-{:.subtitle}
+{:.subtitle pb-2}
 ## Why pick Flask?
 
 {:.first} 
