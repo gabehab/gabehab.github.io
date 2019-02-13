@@ -40,10 +40,10 @@ Also, source control is pivotal, and 100% neccessary when creating _any_ sized p
 
 Only you know what you need and want - but make sure to research all your options! Overlooking this can mean lots of code debt in the future. Here's an example of the tech I've used in the past to create complex web apps.
 
-Part of Stack | Technology | Libraries
---- | --- | ---
-Frontend | Vue | Vuex, Router, SCSS
-Backend | Flask | SQLAlchemy, Celery, Pandas
-Database | Postgres, Redis | 
-DevTools | Venv, Webpack | Vue-cli, Uglify
+Part of Stack | Technology | Libraries|
+--- | --- | ---|
+Frontend | Vue | Vuex, Router, SCSS|
+Backend | Flask | SQLAlchemy, Celery, Pandas|
+Database | Postgres, Redis | |
+DevTools | Venv, Webpack | Vue-cli, Uglify|
 
