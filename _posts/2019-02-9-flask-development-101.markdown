@@ -4,7 +4,7 @@ title:  "Building a Flask Application: Where to Start"
 date:   2019-02-09 02:10:38 -0800
 categories: python vue web-development programming
 ---
-
+{:.subtitle}
 ## Why pick Flask?
 
 {:.first} 
@@ -40,7 +40,7 @@ Also, source control is pivotal, and 100% neccessary when creating _any_ sized p
 
 Only you know what you need and want - but make sure to research all your options! Overlooking this can mean lots of code debt in the future. Here's an example of the tech I've used in the past to create complex web apps.
 
-{.table.table.table-striped.table-hover}
+{:.table.table.table-striped.table-hover}
 Part of Stack | Technology | Libraries|
 --- | --- | ---|
 Frontend | Vue | Vuex, Router, SCSS|
