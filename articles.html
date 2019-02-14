@@ -22,7 +22,7 @@ permalink: /writings/
                 {{ cat }}&nbsp;|&nbsp;
                 {%- endfor -%}
                 </div>
-                {{ post.content | truncatewords:30 }}
+                {{ post.content | markdownify | strip_html | truncatewords:30 }}
 
                 {%- if site.show_excerpts -%}
                     {{ post.excerpt }}
