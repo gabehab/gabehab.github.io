@@ -17,41 +17,26 @@ Looking back, I think it was a great use of time and allowed me to get down and 
 
 I'll skip over most of the boring part most authors include (the project setup and enviroment-specific stuff) and jump write into some good ol' code. But first, lets get our [bering's strait](https://en.wikipedia.org/wiki/Bering_Strait) (sea what I did there?) and look at a file overview:
 
-views \
+*views*  -- index.ejs  -- accounts.ejs
  
- -- index.ejs
- -- accounts.ejs
- .... etc ....
+*routes* -- index.js -- accounts.js -- users.js
  
-routes \
- 
- -- index.js
- -- accounts.js
- -- users.js
- 
-models \
- 
- -- users.js
- -- urls.js
+*models* -- users.js -- urls.js
  
 app.js
 
-middleware \
+*middleware* -- permissions.js
  
- -- permissions.js
- 
-credentials \
- 
- -- secretstuff.js
+*credentials* -- secretstuff.js
  
 package.json
-... npm downloads, etc ...
 
 
 It's a simple enough layout, very old school MVC, which is what its based on. Since my first go at the project wasn't with Vue, it meant using a templating engine native to Express. In this case I used EJS, instead of Pug/Jade beacuse I prefered the syntax, also Pug is definetly the normal. 
 
 The `routes` and `models` directory is real meat and potatoes of the code. The models are straightforward, using Mongo makes life very flexible when developing on the fly. Representing a shortened URL looks like this: 
-{:code}
+
+{:.code}
 ```JavaScript
 var mongoose = require("mongoose");
 var uniqueValidator = require("mongoose-unique-validator");
