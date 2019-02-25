@@ -40,26 +40,25 @@ layout: default
     <div class="">
         <h3 class="post-list-heading">{{ page.list_title | default: "Recent Writings" }}</h3>
         <div class="post-list">
-   
-        <div class="columns pt-2">
-            {%- for post in site.posts -%}
-            <div class="column">
-                    <span class="post-meta">{{ post.date | date: "%a, %b %d, %y" }}</span>
-                    <h3>
-                        <a class="post-link" href="{{ post.url | relative_url }}">
-                            {{ post.title | escape }}
-                        </a>
-                     </h3>
-                     {{ post.content | markdownify | strip_html | truncatewords:30 }}
+            <div class="columns pt-2">
+                {%- for post in site.posts -%}
+                <div class="column">
+                        <span class="post-meta">{{ post.date | date: "%a, %b %d, %y" }}</span>
+                        <h3>
+                            <a class="post-link" href="{{ post.url | relative_url }}">
+                                {{ post.title | escape }}
+                            </a>
+                        </h3>
+                        {{ post.content | markdownify | strip_html | truncatewords:30 }}
+                        
                     
-                   
-                    {%- if site.show_excerpts -%}
-                    {{ post.excerpt }}
-                    {%- endif -%}        
+                        {%- if site.show_excerpts -%}
+                        {{ post.excerpt }}
+                        {%- endif -%}        
+                </div>
+                {%- endfor -%}
             </div>
-            {%- endfor -%}
         </div>
-    </div>
     </div>
     {%- endif -%}
 

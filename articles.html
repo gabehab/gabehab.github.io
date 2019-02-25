@@ -5,11 +5,10 @@ permalink: /writings/
 ---
 
 <div class="container">
-    <div class="post-list">
-
+<div class="post-list table table-striped">
         <div class="columns pt-2">
             {%- for post in site.posts -%}
-            <div class="column">
+            <div class="col-12 pt-2 pb-2 mb-2 mt-2">
                 <span class="post-meta">{{ post.date | date: "%a, %b %d, %y" }}</span>
                 <h3>
                     <a class="post-link" href="{{ post.url | relative_url }}">
