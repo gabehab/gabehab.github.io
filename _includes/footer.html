@@ -5,12 +5,8 @@
         <div class="columns">
             <div class="column text-right">
                 <h4 class="text-right">{{ site.title | escape }}</h4>
-                {%- if site.author -%}
-                {{ site.author | escape }}
-                {%- endif -%}
                 <p>{{- site.description | escape -}}</p>
                 {%- if social.github -%}<a href="https://github.com/{{ social.github | cgi_escape | escape }}" title="{{ social.github | escape }}"><svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg></a>{%- endif -%}
-            
             </div>
         </div>
 
