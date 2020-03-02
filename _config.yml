@@ -17,7 +17,7 @@ title: Gabriel Habayeb
 author: Gabriel Habayeb
 email: ghabayeb@outlook.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Gabriel Habayeb - my portfolio and blog. Find information about Node, Vue, Flask and way more! 
+  A portfolio and blog. Find information about Node, Vue, Flask and way more! 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ghabayeb.com" # the base hostname & protocol for your site, e.g. http://example.com
 social_links:

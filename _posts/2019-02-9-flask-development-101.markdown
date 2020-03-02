@@ -2,7 +2,8 @@
 layout: post
 title:  "Building a Flask Application: Where to Start"
 date:   2019-02-09 02:10:38 -0800
-categories: python vue web-development programming
+categories: [development, opinion]
+tags: [python,vue,web-development,programming]
 ---
 
 {:.first} 

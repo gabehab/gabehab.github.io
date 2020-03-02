@@ -2,7 +2,8 @@
 layout: post
 title:  "Build a URL Shortener with Node + Mongo: All things Models"
 date:   2019-02-13 01:10:48 -0800
-categories: nodejs programming web-development code mongodb
+categories: [development, opinion]
+tags: [nodejs,programming,web-development,code,mongodb]
 ---
 
 {:.first} 

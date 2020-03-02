@@ -2,7 +2,8 @@
 layout: post
 title:  "Refreshing an old stack's front end"
 date:   2019-01-31 11:10:48 -0800
-categories: python vue web-development programming opinion
+categories: [development, opinion]
+tags: [python,vue,web-development,programming,opinion]
 ---
 
 {:.first} 

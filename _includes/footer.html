@@ -1,15 +1,10 @@
-{%- assign social = site.social_links -%}
-
-<footer class="navbar">
-    <div class="container">
-        <div class="columns">
-            <div class="column text-right">
+<br>
+<footer class="footer">
+    <div class="columns">
+        <div class="col-2 hide-sm"></div>
+        <div class="col-10 is-full-mobile text-right"> 
                 <h4 class="text-right">{{ site.title | escape }}</h4>
                 <p>{{- site.description | escape -}}</p>
-                {%- if social.github -%}<a href="https://github.com/{{ social.github | cgi_escape | escape }}" title="{{ social.github | escape }}"><svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg></a>{%- endif -%}
-            </div>
         </div>
-
     </div>
-
 </footer>

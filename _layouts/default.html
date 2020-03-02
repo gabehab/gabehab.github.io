@@ -7,14 +7,8 @@
 
         {%- include header.html -%}
 
-        <main class="container" aria-label="Content">
-            <div class="columns">
-                <div class=" col-2 hide-sm"></div>
-                <div class="column">
-                    {{ content }}
-                </div>
-                <div class=" col-4 hide-sm"></div>
-            </div>
+        <main class="fluid-container" aria-label="Content">
+            {{ content }}
         </main>
 
         {%- include footer.html -%}

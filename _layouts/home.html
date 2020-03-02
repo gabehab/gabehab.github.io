@@ -1,48 +1,60 @@
 ---
 layout: default
-
 ---
 
-<div class="column">
-
-    <div class="hero">
-        <h4> Preamble </h4>
-        <p> 
-            This is a site dedicated to all things technology, and a little bit about me. If you've manage to stumble onto this treasure trove of randomness by accident or misfortune, 
-            welcome! Please sit back and peruse at your leisure.
-        </p>
-        <p>
-            I've had the fortune of working in the tech industry for the better part of the last decade. My journey started off earnestly, working as a co-op student at a small NGO in
-            Toronto. It was there I dove head first into the web programming, which relatively new to me, considering my University courses focused on software development. 
-        </p>
-        <p>
-            I didn't know what I wanted to do in terms of a career, or where I'd end up geographically, or even if I wanted to finish school. But ultimately, over the course of interships, co-op placements,
-             part time, contract and full time work (and graduating), I've come to love building, creating and coding software, regardless of platform.    
-        </p>
-
-        <h4>  Present Day </h4>
-        <p> 
-            These days, I'm working at <a href="https://www.ubc.ca/"> UBC </a>, a world-renowned educational institution. It's here that I program solutions used by tens of thousands of 
-            students and faculty, with a unique tech stack and an awesome team.
-            Outside of of that, I also take part in a variety of my own projects and contracts. From working with companies across various industries 
-            (<a href="https://customcare.ca">Insurance</a>, <a href="https://vidyard.com">SaaS</a>, <a href="https://nexthome.ca/">real estate</a>)
-            to building my own <a href="https://lyt.haus">software</a>. 
-        </p>
-        <p>
-            Personally, I find the most rewarding jobs are challenging, diverse and look to solve something meaningful. A more detailed description of my career thusfar can be seen on my <a href="/work">work page</a>. If your organization is looking for a developer proficient with all things JS, Python,
-            and more as team lead, contact me at via email. 
-        </p>
+<div class="columns">
+    <div class="col-2 hide-sm"></div>
+    <div class="col-10 is-full-mobile"> 
+        {% include hero.html title="Gabriel Habayeb" subtitle="the stack never stops" %}
+    </div>
     </div>
 
-    {{ content }}
-    
+    <section class="section">
+        <div class="columns">
+            <div class="col-2 hide-sm"></div>
+            <div class="col-6 is-full-mobile"> 
+                <div class="">
+                    <h4> Preamble </h4>
+                    <p> 
+                        This is a site dedicated to all things technology, and a little bit about me. If you've manage to stumble onto this treasure trove of randomness by accident or misfortune, 
+                        welcome! Please sit back and peruse at your leisure.
+                    </p>
+                    <p>
+                        I've had the fortune of working in the tech industry for the better part of the last decade. My journey started off earnestly, working as a co-op student at a small NGO in
+                        Toronto. It was there I dove head first into the web programming, which relatively new to me, considering my University courses focused on software development. 
+                    </p>
+                    <p>
+                        I didn't know what I wanted to do in terms of a career, or where I'd end up geographically, or even if I wanted to finish school. But ultimately, over the course of interships, co-op placements,
+                        part time, contract and full time work (and graduating), I've come to love building, creating and coding software, regardless of platform.    
+                    </p>
+
+                    <h4>  Present Day </h4>
+                    <p> 
+                        These days, I'm working at <a href="https://www.ubc.ca/"> UBC </a>, a world-renowned educational institution. It's here that I program solutions used by tens of thousands of 
+                        students and faculty, with a unique tech stack and an awesome team.
+                        Outside of of that, I also take part in a variety of my own projects and contracts. From working with companies across various industries 
+                        (<a href="https://customcare.ca">Insurance</a>, <a href="https://vidyard.com">SaaS</a>, <a href="https://nexthome.ca/">real estate</a>)
+                        to building my own <a href="https://lyt.haus">software</a>. 
+                    </p>
+                    <p>
+                        Personally, I find the most rewarding jobs are challenging, diverse and look to solve something meaningful. A more detailed description of my career thusfar can be seen on my <a href="/work">work page</a>. If your organization is looking for a developer proficient with all things JS, Python,
+                        and more as team lead, contact me at via email. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     {%- if site.posts.size > 0 -%}
-    <div class="">
-        <h3 class="post-list-heading">{{ page.list_title | default: "Recent Writings" }}</h3>
-        <div class="post-list">
-            <div class="columns pt-2">
-                {%- for post in site.posts -%}
-                <div class="column">
+    <section class="section">
+        <div class="columns">
+            <div class="col-2 hide-sm"></div>
+
+            <div class="col-6 is-full-mobile"> 
+            <h4 class="">{{ page.list_title | default: "Recent Writings" }}</h4>
+            <div class="post-list">
+                    {%- for post in site.posts -%}
+                    <div class="">
                         <span class="post-meta">{{ post.date | date: "%a, %b %d, %y" }}</span>
                         <h3>
                             <a class="post-link" href="{{ post.url | relative_url }}">
@@ -51,15 +63,16 @@ layout: default
                         </h3>
                         {{ post.content | markdownify | strip_html | truncatewords:30 }}
                         
-                    
+                        
                         {%- if site.show_excerpts -%}
                         {{ post.excerpt }}
                         {%- endif -%}        
+                    </div>
+                    {%- endfor -%}
                 </div>
-                {%- endfor -%}
             </div>
-        </div>
-    </div>
-    {%- endif -%}
+            </div>
+        </section>
+        {%- endif -%}
 
 </div>
