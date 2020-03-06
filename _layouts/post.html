@@ -5,14 +5,7 @@ layout: default
 <br>
 <div class="columns">
 <div class="column hide-md"></div>
-            <div class="column is-four-fifths"> 
-    <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      {{ page.date | date: date_format }}
-    </time>
-  </div>
-<div class="column hide-md"></div>
-            <div class="column is-four-fifths"> 
+      <div class="column is-four-fifths"> 
       {% include hero.html title=page.title subtitle=page.subtitle %}
   </div>
 </div>
@@ -21,8 +14,8 @@ layout: default
 
 <article class="section" itemscope itemtype="http://schema.org/BlogPosting">
     <div class="columns">
-<div class="column hide-md"></div>
-            <div class="column is-four-fifths"> 
+      <div class="column hide-md"></div>
+      <div class="column is-four-fifths"> 
             {{ content }}
         </div>
 </div>
