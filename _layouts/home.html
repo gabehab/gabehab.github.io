@@ -50,7 +50,7 @@ layout: default
     <section class="section">
         <div class="columns">
             <div class="column hide-md"></div>
-            <div class="column is-four-fifths">  
+            <div class="column is-two-thirds">  
             <h4 class="">{{ page.list_title | default: "Recent Writings" }}</h4>
             <div class="post-list">
                     {%- for post in site.posts -%}
@@ -71,6 +71,7 @@ layout: default
                     {%- endfor -%}
                 </div>
             </div>
+            <div class="column hide-md"></div>
             </div>
         </section>
         {%- endif -%}
