@@ -48,9 +48,8 @@ layout: default
     {%- if site.posts.size > 0 -%}
     <section class="section">
         <div class="columns">
-            <div class="col-2 hide-sm"></div>
-
-            <div class="column is-half-widescreen"> 
+            <div class="column hide-md"></div>
+            <div class="column is-four-fifths">  
             <h4 class="">{{ page.list_title | default: "Recent Writings" }}</h4>
             <div class="post-list">
                     {%- for post in site.posts -%}
