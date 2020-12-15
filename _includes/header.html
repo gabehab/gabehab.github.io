@@ -1,10 +1,14 @@
 <nav class="navbar">
-    <a href="{{ "/" | relative_url }}" class="brand is-size-4 has-text-grey-dark has-text-weight-bold">
-        GH
-    </a>
-    <div class="navbar-section">
-        <a href="{{relative_url}}/writings" class="btn btn-link">writings</a>
-        <a href="{{relative_url}}/work" class="btn btn-link">work</a>
-        <a href="https://github.com/gabehab" class="btn btn-primary ml-1">code</a>
+    <div class="navbar-brand">
+        <a href="{{ "/" | relative_url }}" class="navbar-item brand is-size-4 has-text-grey-dark has-text-weight-bold">
+            GH
+        </a>
+    </div>
+ 
+    <div class="navbar-menu">
+        <div class="navbar-start">
+            <a href="{{relative_url}}/writings" class="btn btn-link navbar-item">writings</a>
+            <a href="{{relative_url}}/work" class="btn btn-link navbar-item">work</a>
+            <a href="https://github.com/gabehab" class="btn btn-primary ml-1 navbar-item">code</a>
     </div>
 </nav>
