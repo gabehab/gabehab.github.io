@@ -67,7 +67,7 @@ Finally, using the library. In the component you want to gate (e.g. a form), add
 Wow thats a lot of stuff. But in reality, just a form with an input and a button. The fun stuff is the `<vue-hcaptcha />` component. Attached to that component are the events provided by the library. But before we get there, we need to handle the submit! In this case, just a simple button with a method `onSubmit()`.
 
 ```js
-script>
+<script>
 import VueHcaptcha from '@hcaptcha/vue-hcaptcha';
 
 export default {

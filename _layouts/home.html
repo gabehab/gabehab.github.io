@@ -43,9 +43,9 @@ layout: default
             <h4 class="">{{ page.list_title | default: "Recent Writings" }}</h4>
             <div class="post-list">
                     {%- for post in site.posts -%}
-                    {% if forloop.index > 3}
-                        {% break %}
-                    {% endif %}
+                        {% if forloop.index > 3}
+                            {% break %}
+                        {% endif %}
                     <div class="">
                         <span class="post-meta">{{ post.date | date: "%a, %b %d, %y" }}</span>
                         <h3>
