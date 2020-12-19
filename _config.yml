@@ -13,17 +13,17 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Gabriel Habayeb 
+title: Gabriel Habayeb
 author: Gabriel Habayeb
-email: ghabayeb@outlook.com
+email: me@qxg.ca
 description: >- # this means to ignore newlines until "baseurl:"
-  A portfolio and blog. Find information about Node, Vue, Flask and way more! 
+  A portfolio and blog. Find information about Node, Vue, and full stack development
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ghabayeb.com" # the base hostname & protocol for your site, e.g. http://example.com
 social_links:
-  github_username:  gabehab
+  github_username: gabehab
 sass:
-    style: compressed
+  style: compressed
 # Build settings
 markdown: kramdown
 theme: minima
