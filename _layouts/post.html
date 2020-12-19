@@ -2,24 +2,21 @@
 layout: default
 ---
 
-<br>
+<br />
 <div class="columns">
-<div class="column hide-md"></div>
-      <div class="column is-four-fifths"> 
-      {% include hero.html title=page.title subtitle=page.subtitle %}
+  <div class="column hide-md"></div>
+  <div class="column is-10">
+    {% include hero.html title=page.title subtitle=page.subtitle %}
   </div>
 </div>
 
-<br>
+<br />
 
 <article class="section" itemscope itemtype="http://schema.org/BlogPosting">
-    <div class="columns">
-      <div class="column hide-md"></div>
-      <div class="column is-two-thirds"> 
-          {{ content }}
-      </div>
-      <div class="column hide-md"></div>
-    </div>
-<a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-
+  <div class="columns">
+    <div class="column hide-md"></div>
+    <div class="column is-two-thirds">{{ content }}</div>
+    <div class="column hide-md"></div>
+  </div>
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
