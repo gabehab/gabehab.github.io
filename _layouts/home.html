@@ -3,69 +3,75 @@ layout: default
 ---
 
 <div class="columns">
-    <div class="column hide-md"></div>
-    <div class="column is-10"> 
-        {% include hero.html title="Gabriel Habayeb" subtitle="the stack never stops" %}
-    </div>
-    </div>
+  <div class="column hide-md"></div>
+  <div class="column is-10">
+    {% include hero.html title="Gabriel Habayeb" subtitle="the stack never
+    stops" %}
+  </div>
 
-    <section class="section">
-        <div class="columns">
-            <div class="column hide-md"></div>
-            <div class="column is-two-thirds"> 
-                <div class="">
-                    <h4> Preamble </h4>
-                    <p>
-                        I've had the fortune of working in the tech industry for the better part of the last decade. My journey started off earnestly, working at a small NGO in
-                        Toronto. Sinc then, I've had the pleaure of working across multiple industries and organizations.  
-                    </p>
-                    <h4>  Present Day </h4>
-                    <p> 
-                        These days, I'm working full-time at my startup <a href="https://www.fixed.link/"> fixed.link </a>, a fully feature URL management service. As the technical founder, I've had the distinct opportunity to truly experience the _fullest_ of full-stacks. 
-                        Before the jump to the startup hustle, I've worked at companies that dealt with <a href="ubc.ca">education</a>, 
-                        <a href="https://customcare.ca">insurance</a>, <a href="https://vidyard.com">MarTech</a>, and <a href="https://nexthome.ca/">real estate</a>.
-                    </p>
-                    <p>
-                        Personally, it's all about the growth and challenge. A more detailed description of my career thusfar can be seen on my <a href="/work">work page</a>. If your organization is looking for a developer proficient with all things JS, Python,
-                        and more as team lead, contact me at via email. 
-                    </p>
-                </div>
-            </div>
-            <div class="column hide-md"></div>
+  <section class="section">
+    <div class="columns">
+      <div class="column hide-md"></div>
+      <div class="column is-two-thirds">
+        <div class="">
+          <h4>Preamble</h4>
+          <p>
+            I've had the fortune of working in the tech industry for the better
+            part of the last decade. My journey started off earnestly, working
+            at a small NGO in Toronto. Sinc then, I've had the pleaure of
+            working across multiple industries and organizations.
+          </p>
+          <h4>Present Day</h4>
+          <p>
+            These days, I'm working full-time at my startup
+            <a href="https://www.fixed.link/"> fixed.link </a>, a fully feature
+            URL management service. As the technical founder, I've had the
+            distinct opportunity to truly experience the fullest of full-stacks.
+            Before the jump to the startup hustle, I've worked at companies that
+            dealt with <a href="ubc.ca">education</a>,
+            <a href="https://customcare.ca">insurance</a>,
+            <a href="https://vidyard.com">MarTech</a>, and
+            <a href="https://nexthome.ca/">real estate</a>.
+          </p>
+          <p>
+            Personally, it's all about the growth and challenge. A more detailed
+            description of my career thusfar can be seen on my
+            <a href="/work">work page</a>. If your organization is looking for a
+            developer proficient with all things JS, Python, and more as team
+            lead, contact me at via email.
+          </p>
         </div>
-    </section>
+      </div>
+      <div class="column hide-md"></div>
+    </div>
+  </section>
 
-    {%- if site.posts.size > 0 -%}
-    <section class="section">
-        <div class="columns">
-            <div class="column hide-md"></div>
-            <div class="column is-two-thirds">  
-            <h4 class="">{{ page.list_title | default: "Recent Writings" }}</h4>
-            <div class="post-list">
-                    {%- for post in site.posts -%}
-                        {% if forloop.index > 3}
-                            {% break %}
-                        {% endif %}
-                    <div class="">
-                        <span class="post-meta">{{ post.date | date: "%a, %b %d, %y" }}</span>
-                        <h3>
-                            <a class="post-link" href="{{ post.url | relative_url }}">
-                                {{ post.title | escape }}
-                            </a>
-                        </h3>
-                        {{ post.content | markdownify | strip_html | truncatewords:30 }}
-                        
-                        
-                        {%- if site.show_excerpts -%}
-                        {{ post.excerpt }}
-                        {%- endif -%}        
-                    </div>
-                    {%- endfor -%}
-                </div>
-            </div>
-            <div class="column hide-md"></div>
-            </div>
-        </section>
-        {%- endif -%}
-
+  {%- if site.posts.size > 0 -%}
+  <section class="section">
+    <div class="columns">
+      <div class="column hide-md"></div>
+      <div class="column is-two-thirds">
+        <h4 class="">{{ page.list_title | default: "Recent Writings" }}</h4>
+        <div class="post-list">
+          {%- for post in site.posts -%} {% if forloop.index > 3} {% break %} {%
+          endif %}
+          <div class="">
+            <span class="post-meta"
+              >{{ post.date | date: "%a, %b %d, %y" }}</span
+            >
+            <h3>
+              <a class="post-link" href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}
+              </a>
+            </h3>
+            {{ post.content | markdownify | strip_html | truncatewords:30 }} {%-
+            if site.show_excerpts -%} {{ post.excerpt }} {%- endif -%}
+          </div>
+          {%- endfor -%}
+        </div>
+      </div>
+      <div class="column hide-md"></div>
+    </div>
+  </section>
+  {%- endif -%}
 </div>

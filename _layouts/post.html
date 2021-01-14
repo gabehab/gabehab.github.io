@@ -15,8 +15,28 @@ layout: default
 <article class="section" itemscope itemtype="http://schema.org/BlogPosting">
   <div class="columns">
     <div class="column hide-md"></div>
-    <div class="column is-8 content">{{ content }}</div>
+    <div class="column is-8 content">
+      <div class="contents">
+        <h2>Table of contents</h2>
+        <div class="links"></div>
+      </div>
+      {{ content }}
+    </div>
     <div class="column hide-md"></div>
   </div>
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
+<script>
+  let a = document.querySelectorAll("h2,h3");
+  let b = document.querySelector(".links");
+  let z = document.createElement("br");
+  for (i = 0; i < a.length; i++) {
+    c = document.createElement("a");
+
+    c.href = "#" + a[i].id;
+    x = document.createTextNode(a[i].textContent);
+    c.append(x);
+    c.append(z);
+    b.prepend(c);
+  }
+</script>
