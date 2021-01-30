@@ -1,10 +1,16 @@
 // Navbar
+body{
+  margin-top: 72px;
+}
 .navbar {
   align-items: stretch;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   height: 72px;
+  position: fixed;
+  width: 100%;
+  top: 0;
 
   .navbar-section {
     align-items: center;
@@ -26,4 +32,17 @@
     font-size: $font-size-lg;
     text-decoration: none;
   }
+
+  .navbar-menu.is-active{
+    display: block;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 52px;
+  }
+
+  .navbar-burger{
+    z-index: 10000000000000;
+  }
 }
+
