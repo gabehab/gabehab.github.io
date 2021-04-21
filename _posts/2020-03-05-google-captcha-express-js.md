@@ -6,11 +6,13 @@ categories: [development, opinion]
 tags: [express,captcha,node,web-development,programming,opinion]
 ---
 
-Building an anonymous user-facing technology is risky! Abuse, and spam are likely, along with potential DOS and other security/performance issues abound. Hence, [Google ReCaptcha](https://developers.google.com/recaptcha/) - a wide-spread (everyone uses it), intelligent (it's a lot more versitile than before) way to help limit spam from otherwise exposed forms. 
+Before getting started, [check out the newer version of this article](https://ghabayeb.com/development/degoogle/2020/12/16/using-hcaptcha-in-vue-instead-of-google.html) where I implement hCaptcha with express/Vue. hCaptcha is a non-google dependent captcha service. Otherwise, enjoy.
 
-Captcha systems are very common in today's internet with websites demanding clarity on species (robot or human) before providing anything useful. And it makes sense, non-validated users (i.e. webcrawlers, bots, spiders, etc) can easily abuse services, reducing resources for meaningful clients. Google's latest version is especially useful in that it grades the quality of suspiciousness on a scale (0 - 1), allowing for judgement of quality to be determined by the itself. 
+Building an anonymous user-facing technology is risky! Abuse, and spam are likely, along with potential DOS and other security/performance issues abound. Hence, [Google ReCaptcha](https://developers.google.com/recaptcha/) - a wide-spread (everyone uses it), intelligent (it's a lot more versatile than before) way to help limit spam from otherwise exposed forms. 
 
-It also can grade interations without any user interaction - no more clicking "I'm not a robot." buttons during checkout or form submission! A seemless integration means legitimate users no longer have to be burdened by puzzle-esque questionaires. So yeah, all in all, it's a good start at validating interactions on forms (although there's plenty more one can do to limit spam).
+Captcha systems are very common in today's internet with websites demanding clarity on species (robot or human) before providing anything useful. And it makes sense, non-validated users (i.e. webcrawlers, bots, spiders, etc) can easily abuse services, reducing resources for meaningful clients. Google's latest version is especially useful in that it grades the quality of the user on a scale (0 - 1), allowing for judgement of quality to be determined by the client. 
+
+It also can grade users without any user interaction - no more clicking "I'm not a robot." buttons during checkout or form submission! A seamless integration means legitimate users no longer have to be burdened by puzzle-esque questionnaires. So yeah, all in all, it's a good start at validating interactions on forms (although there's plenty more one can do to limit spam).
 
 ## Integrating Google ReCaptcha V3 with an Express application
 
@@ -37,7 +39,7 @@ Next, configure how you want the script to inject itself into the form you wante
         }); 
     }
 ```
-
+<br/>
 ```HTML
     <form>
         <!-- Other form stuff -->
