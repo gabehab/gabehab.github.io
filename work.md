@@ -10,7 +10,7 @@ permalink: /work/
 
 {:.table.p-2}
 --- | ---
-[Together Software](https://togethersoftware.com) | Software Developer,  | Current
+[Together Software](https://togethersoftware.com) | Software Developer, all things javascript including Node, React, NoSQL goodness and more. | Current
 [fixed.link](https://fixed.link) | Founder, fixed.link provides a URL management service puts you in control. | Current
 [Hootsuite](https://hootsuite.com) | Software Developer, building an efficient and stunning experience across a diverse stack with React, Go and much more.| 2020
 [University of British Columbia](https://ubc.ca) | Full stack developer, tasked with creating and developing applications used by over 65, 000 students and faculty.| 2018 - 2020
